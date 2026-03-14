@@ -3,6 +3,8 @@ import { Mic, Square, Timer } from 'lucide-react'; // or your icon library
 import { supabase } from '../lib/supabaseClient'; // your existing client
 import { useTelegram } from '../lib/telegram'; // our Telegram WebApp context
 
+<RecordButton battleId={currentBattle.id} onRecordingComplete={handleVoiceUploaded} />
+
 interface RecordButtonProps {
   battleId: string; // pass from BattleArena
   onRecordingComplete: (voiceUrl: string) => void;
